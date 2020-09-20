@@ -6,22 +6,22 @@ const extensions = ['.js', '.ts'];
 
 /** @type {import('rollup').RollupOptions} */
 const config = {
-    input: 'src/app.ts',
-    output: {
-        dir: 'dist',
-        format: 'iife',
-        name: 'Cardinal'
-    },
-    
-    plugins: [
-        resolve({ extensions }),
-        commonjs(),
-        babel({
-          extensions,
-          babelHelpers: 'bundled',
-          include: ['src/**/*'],
-        }),
-      ],
-}
+  input: 'src/app.ts',
+  output: {
+    dir: 'dist',
+    format: 'iife',
+    name: 'Cardinal',
+  },
+
+  plugins: [
+    resolve({ extensions }),
+    commonjs(),
+    babel({
+      extensions,
+      babelHelpers: 'bundled',
+      include: ['src/**/*'],
+    }),
+  ],
+};
 
 export default config;
